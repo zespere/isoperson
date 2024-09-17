@@ -29,34 +29,34 @@
       options: ["Ignoruję je", "Gdy go zauważę zależnie od okoliczności dzielę się wiadomością ICMP z bliskimi", "Jestem bezsilny"]
     },
     {
-      question: "",
+      question: "Jak spędzasz czas wolny?",
       options: ["Duże grono znajomych z trwałymi znajomościami.", "Niezależność i ciągłą możliwość zmiany ścieżki.", "Ekspresję samego siebie i kreatywność.", "Spójność i szczerość"]
     },
     {
-      question: "Co uważasz za najważniejsze.",
-      options: ["Duże grono znajomych z trwałymi znajomościami.", "Niezależność i ciągłą możliwość zmiany ścieżki.", "Ekspresję samego siebie i kreatywność.", "Spójność i szczerość"]
+      question: "Jaki jest twój sposób na okazywanie wdzięczności?",
+      options: ["", "", "", ""]
     },
     {
-      question: "Co uważasz za najważniejsze.",
-      options: ["Duże grono znajomych z trwałymi znajomościami.", "Niezależność i ciągłą możliwość zmiany ścieżki.", "Ekspresję samego siebie i kreatywność.", "Spójność i szczerość"]
+      question: "Kiedy zdobywasz energię?",
+      options: ["Gdy ktoś podłączy wtyczkę", "Poprzez konsumpcję pakietów"]
     },
     {
-      question: "Co uważasz za najważniejsze.",
-      options: ["Duże grono znajomych z trwałymi znajomościami.", "Niezależność i ciągłą możliwość zmiany ścieżki.", "Ekspresję samego siebie i kreatywność.", "Spójność i szczerość"]
+      question: "Czego się najbardziej boisz?",
+      options: ["Ryszard Masztalerz", "", "", ""]
     },
     {
-      question: "Co uważasz za najważniejsze.",
-      options: ["Duże grono znajomych z trwałymi znajomościami.", "Niezależność i ciągłą możliwość zmiany ścieżki.", "Ekspresję samego siebie i kreatywność.", "Spójność i szczerość"]
-    },
-    {
-      question: "Co uważasz za najważniejsze.",
-      options: ["Duże grono znajomych z trwałymi znajomościami.", "Niezależność i ciągłą możliwość zmiany ścieżki.", "Ekspresję samego siebie i kreatywność.", "Spójność i szczerość"]
+      question: "Czym wg. Ciebie jest sukces?",
+      options: ["200", "01110000011101000110111101110011011110100110010101101011001011100111000001101100", "nie mam pomysłu na odpowiedź :/", "asdhawuioawd"]
     }
   ];
 
+  let startTest = false;
+
   let answers = Array(questions.length).fill(null);
+
   let result = "";
   let desc = "Nieznany błąd, przepraszam :^(";
+
   let physical = 0;
   let data_link = 0;
   let network = 0;
@@ -64,6 +64,10 @@
   let session = 0;
   let presentation = 0;
   let application = 0;
+
+  function start() {
+    startTest = true;
+  }
 
   function submit() {
     const score = answers.reduce((acc, answer) => acc + (answer ? answer : 0), 0);
@@ -77,13 +81,11 @@
   }
 </script>
 
+<!-- O ty hakierze jeden widzę że HTML'a przeglądasz :o -->
+
 <div>
   <h1 class="bg-blue-400 text-5xl text-white font-bold text-center py-12 rounded-b-2xl">Test osobowości ISO/OSI</h1>
-  <div class="py-16 text-xl">
-  <p> Miło mi Ciebie tu widzieć! </p> <br />
-  <p> Chciałbym Cię zaprosić do zmuszającego do myślenia wyjątkowego doświadczenia jakim jest test osobowości oparty na modelu ISO/OSI dzięki któremu odkryjesz nigdy wczęściej nieznane ci zakamarki swojej osobowości. </p> <br/>
-  <p> Dziękuję za uwagę i życzę miłej podróży. </p>
-  </div>
+  {#if startTest}
   {#each questions as { question, options }, index}
     <div class="py-12">
       <h2>{question}</h2>
@@ -97,11 +99,22 @@
       </div>
     </div>
   {/each}
-  <button on:click={submit} class="bg-green-500 w-72 h-12 rounded-lg text-white text-xl font-medium text-center">Otrzymaj wynik</button>
+  <button on:click={submit} class="bg-green-500 w-full mb-12 h-12 rounded-lg text-white text-xl font-medium md:w-72 md:mx-auto block">Otrzymaj wynik</button>
   {#if result}
-    <section class="p-8 bg-zinc-200 rounded-xl my-12">
-    <h2 class="text-2xl mb-8">Jesteś {result}!</h2>
+    <section class="p-8 bg-zinc-200 rounded-xl mb-12">
+    <h2 class="text-2xl mb-8">Jesteś warstwą {result}!</h2>
     <p class="">{desc}</p>
     </section>
   {/if}
+  {:else}
+  <div class="py-16 text-xl">
+  <p> Miło mi Ciebie tu widzieć! </p> <br />
+  <p> Chciałbym Cię zaprosić do zmuszającego do myślenia wyjątkowego doświadczenia jakim jest test osobowości oparty na modelu ISO/OSI dzięki któremu odkryjesz nigdy wczęściej nieznane ci zakamarki swojego <i><b>ja</b></i>. </p> <br/>
+  <p> Dziękuję za uwagę i życzę miłej podróży. </p>
+  </div>
+  <button on:click={start} class="bg-blue-400 w-full mb-12 h-12 rounded-lg text-white text-xl font-medium md:w-72 md:mx-auto block">Rozpocznij</button>
+  {/if}
 </div>
+
+<!-- R.I.P. Stefan -->
+<!-- https://www.youtube.com/watch?v=L_jWHffIx5E -->
