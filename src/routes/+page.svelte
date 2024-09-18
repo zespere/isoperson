@@ -183,54 +183,52 @@
 
 <!-- O ty hakierze jeden widzę że HTML'a przeglądasz :o -->
 
-<div>
-	<h1 class="bg-blue-400 text-5xl text-white font-bold text-center py-12 rounded-b-2xl">
-		Test osobowości ISO/OSI
-	</h1>
-	{#if startTest}
-		{#each questions as { question, options }, index}
-			<div class="py-12">
-				<h2 class="p-1 text-lg mb-1">{question}</h2>
-				<div class="flex flex-col space-y-2">
-					{#each options as option, optionIndex}
-						<label class="p-2 bg-zinc-200 rounded-lg">
-							<input type="radio" bind:group={answers[index]} value={optionIndex} />
-							{option}
-						</label>
-					{/each}
-				</div>
+<h1 class="bg-blue-400 text-5xl text-white font-bold text-center py-12 rounded-b-2xl">
+	Test osobowości ISO/OSI
+</h1>
+{#if startTest}
+	{#each questions as { question, options }, index}
+		<div class="py-12">
+			<h2 class="p-1 text-lg mb-1">{question}</h2>
+			<div class="flex flex-col space-y-2">
+				{#each options as option, optionIndex}
+					<label class="p-2 bg-zinc-200 rounded-lg">
+						<input type="radio" bind:group={answers[index]} value={optionIndex} />
+						{option}
+					</label>
+				{/each}
 			</div>
-		{/each}
-		<button
-			on:click={submit}
-			class="bg-green-500 w-full mb-12 h-12 rounded-lg text-white text-xl font-medium md:w-72 md:mx-auto block"
-			>Otrzymaj wynik</button
-		>
-		{#if result}
-			<section class="p-8 bg-zinc-200 rounded-xl mb-12">
-				<h2 class="text-2xl mb-8">Jesteś warstwą {result}!</h2>
-				<p class="">{desc}</p>
-			</section>
-		{/if}
-	{:else}
-		<div class="py-16 text-xl">
-			<p>Miło mi Ciebie tu widzieć!</p>
-			<br />
-			<p>
-				Chciałbym Cię zaprosić do zmuszającego do myślenia wyjątkowego doświadczenia jakim jest test
-				osobowości oparty na modelu ISO/OSI dzięki któremu odkryjesz nigdy wczęściej nieznane ci
-				zakamarki swojego <i><b>ja</b></i>.
-			</p>
-			<br />
-			<p>Dziękuję za uwagę i życzę miłej podróży.</p>
 		</div>
-		<button
-			on:click={start}
-			class="bg-blue-400 w-full mb-12 h-12 rounded-lg text-white text-xl font-medium md:w-72 md:mx-auto block"
-			>Rozpocznij</button
-		>
+	{/each}
+	<button
+		on:click={submit}
+		class="bg-green-500 w-full mb-12 h-12 rounded-lg text-white text-xl font-medium md:w-72 md:mx-auto block"
+		>Otrzymaj wynik</button
+	>
+	{#if result}
+		<section class="p-8 bg-zinc-200 rounded-xl mb-12">
+			<h2 class="text-2xl mb-8">Jesteś warstwą {result}!</h2>
+			<p class="">{desc}</p>
+		</section>
 	{/if}
-</div>
+{:else}
+	<div class="py-16 text-xl">
+		<p>Miło mi Ciebie tu widzieć!</p>
+		<br />
+		<p>
+			Chciałbym Cię zaprosić do zmuszającego do myślenia wyjątkowego doświadczenia jakim jest test
+			osobowości oparty na modelu ISO/OSI dzięki któremu odkryjesz nigdy wczęściej nieznane ci
+			zakamarki swojego <i><b>ja</b></i>.
+		</p>
+		<br />
+		<p>Dziękuję za uwagę i życzę miłej podróży.</p>
+	</div>
+	<button
+		on:click={start}
+		class="bg-blue-400 w-full mb-12 h-12 rounded-lg text-white text-xl font-medium md:w-72 md:mx-auto block"
+		>Rozpocznij</button
+	>
+{/if}
 
 <!-- R.I.P. Stefan -->
 <!-- https://www.youtube.com/watch?v=L_jWHffIx5E -->
