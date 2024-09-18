@@ -3,7 +3,7 @@
 		{
 			question: 'W komunikacji jesteś zwięzły/a?',
 			options: [
-				'Odp 1',
+				'Tak',
 				"Od zawsze fascynowało mnie bogactwo i różnorodność języka polskiego, a szczególnie jego zdolność do tworzenia długich, złożonych wyrazów, które mogą wydawać się nieco przesadne, a wręcz niepotrzebne w codziennej komunikacji. Używanie takich słów sprawia mi ogromną przyjemność, ponieważ pozwala mi na wyrażenie myśli w sposób, który jest zarówno kreatywny, jak i nieco zabawny. W moim odczuciu, długie słowa mają w sobie pewną magię. Kiedy wypowiadam je na głos, czuję, jakby język tańczył w moich ustach, a każda sylaba dodaje nowy wymiar do mojej wypowiedzi. Na przykład, zamiast powiedzieć 'zrozumieć', mogę użyć 'przyswoić sobie złożoność zagadnienia', co nie tylko wydłuża zdanie, ale także nadaje mu pewną powagę i głębię. Często zastanawiam się, dlaczego tak bardzo pociągają mnie te nieco pretensjonalne wyrazy. Może to kwestia chęci wyróżnienia się w tłumie, pragnienia, aby moje wypowiedzi były zapamiętane i docenione. W świecie, w którym króluje szybkość i zwięzłość, ja wybieram drogę, która prowadzi przez labirynty językowych konstrukcji, gdzie każdy zakręt odkrywa nowe, nieznane dotąd słowa."
 			],
 			scores: ['physical', 'presentation']
