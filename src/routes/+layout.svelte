@@ -1,10 +1,10 @@
-<script>
-	import '../app.css';
-</script>
-
 <head>
 	<title>Test osobowości ISO/OSI</title>
 </head>
+
+<script>
+	import '../app.css';
+</script>
 
 <div class="flex flex-col min-h-screen">
 	<main class="px-4 mx-auto flex-grow max-w-[100%]">
