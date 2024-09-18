@@ -7,7 +7,7 @@
 </script>
 
 <div class="flex flex-col min-h-screen">
-	<main class="px-4 mx-auto flex-grow max-w-[100%]">
+	<main class="px-4 mx-auto flex-grow max-w-[100%] md:max-w-4xl">
 		<slot />
 	</main>
 
