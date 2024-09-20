@@ -207,7 +207,7 @@
 	>
 	{#if result}
 		<section class="p-8 mb-12 rounded-xl bg-zinc-200">
-			<h2 class="mb-8 text-2xl">Jesteś warstwą {result}!</h2>
+			<h2 class="mb-8 text-2xl">Najbardziej pasuje do Ciebie... {result}!</h2>
 			<p class="">{desc}</p>
 		</section>
 	{/if}
