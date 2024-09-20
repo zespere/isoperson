@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	let questions = [
 		{
 			question: 'W komunikacji jesteś zwięzły/a?',
