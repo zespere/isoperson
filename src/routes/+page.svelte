@@ -89,6 +89,7 @@
 	];
 
 	let startTest = false;
+	let showError = false;
 	let answers = new Array(questions.length).fill(null);
 
 	let result = '';
@@ -151,6 +152,13 @@
 			'Warstwa aplikacji': application
 		};
 
+		if (answers.some((answer) => answer === null)) {
+			showError = true;
+			return;
+		}
+
+		showError = false;
+
 		result = Object.keys(scores).reduce((a, b) => (scores[a] > scores[b] ? a : b));
 
 		// Set description based on result
@@ -179,6 +187,10 @@
 				break;
 		}
 	}
+
+	$: {
+		answers, (showError = false);
+	}
 </script>
 
 <!-- O ty hakierze jeden widzę że HTML'a przeglądasz :o -->
@@ -200,6 +212,11 @@
 			</div>
 		</div>
 	{/each}
+	{#if showError}
+		<div class="p-4 mb-4 text-red-700 bg-red-100 rounded-lg">
+			Proszę odpowiedzieć na wszystkie pytania przed otrzymaniem wyniku.
+		</div>
+	{/if}
 	<button
 		on:click={submit}
 		class="block mb-12 w-full h-12 text-xl font-medium text-white bg-green-500 rounded-lg md:w-72 md:mx-auto"
