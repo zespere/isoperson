@@ -183,16 +183,16 @@
 
 <!-- O ty hakierze jeden widzę że HTML'a przeglądasz :o -->
 
-<h1 class="bg-blue-400 text-5xl text-white font-bold text-center py-12 rounded-b-2xl">
+<h1 class="py-12 text-5xl font-bold text-center text-white bg-blue-400 rounded-b-2xl">
 	Test osobowości ISO/OSI
 </h1>
 {#if startTest}
 	{#each questions as { question, options }, index}
 		<div class="py-12">
-			<h2 class="p-1 text-lg mb-1">{question}</h2>
+			<h2 class="p-1 mb-1 text-lg">{question}</h2>
 			<div class="flex flex-col space-y-2">
 				{#each options as option, optionIndex}
-					<label class="p-2 bg-zinc-200 rounded-lg">
+					<label class="p-2 break-words rounded-lg bg-zinc-200">
 						<input type="radio" bind:group={answers[index]} value={optionIndex} />
 						{option}
 					</label>
@@ -202,12 +202,12 @@
 	{/each}
 	<button
 		on:click={submit}
-		class="bg-green-500 w-full mb-12 h-12 rounded-lg text-white text-xl font-medium md:w-72 md:mx-auto block"
+		class="block mb-12 w-full h-12 text-xl font-medium text-white bg-green-500 rounded-lg md:w-72 md:mx-auto"
 		>Otrzymaj wynik</button
 	>
 	{#if result}
-		<section class="p-8 bg-zinc-200 rounded-xl mb-12">
-			<h2 class="text-2xl mb-8">Jesteś warstwą {result}!</h2>
+		<section class="p-8 mb-12 rounded-xl bg-zinc-200">
+			<h2 class="mb-8 text-2xl">Jesteś warstwą {result}!</h2>
 			<p class="">{desc}</p>
 		</section>
 	{/if}
@@ -225,7 +225,7 @@
 	</div>
 	<button
 		on:click={start}
-		class="bg-blue-400 w-full mb-12 h-12 rounded-lg text-white text-xl font-medium md:w-72 md:mx-auto block"
+		class="block mb-12 w-full h-12 text-xl font-medium text-white bg-blue-400 rounded-lg md:w-72 md:mx-auto"
 		>Rozpocznij</button
 	>
 {/if}
