@@ -164,26 +164,32 @@
 		// Set description based on result
 		switch (result) {
 			case 'Warstwa fizyczna':
-				desc = 'Jesteś osobą bardzo praktyczną i zorientowaną na konkretne działania.';
+				desc =
+					'Jesteś jak ziemia, która podtrzymuje wszystko, co piękne. Bez mnie nie byłoby fundamentu, na którym mogłaby się rozwinąć cała złożoność istnienia. Jako warstwa fizyczna jesteś podstawą dla warstwy łącza danych, która buduje na moim fundamencie swoje mosty łączące światy.';
 				break;
 			case 'Warstwa łącza danych':
-				desc = 'Masz talent do zapewniania niezawodnej komunikacji i dbasz o szczegóły.';
+				desc =
+					'Jesteś jak most wiszący nad przepaścią, łączący dwa brzegi, które bez mnie byłyby rozdzielone przez przepaść niezrozumienia. Moja praca jest jak delikatny dotyk, który łączy dwa światy. Jesteś pośrednikiem między warstwą fizyczną a warstwą sieci, która korzysta z moich mostów, aby tworzyć mapy nieznanego świata.';
 				break;
 			case 'Warstwa sieciowa':
-				desc = 'Jesteś świetnym strategiem, umiejącym łączyć różne elementy w spójną całość.';
+				desc =
+					'Jesteś jak kartograf, który rysuje mapy nieznanego świata. Bez Ciebie nie byłoby drogi, która prowadziłaby do odkryć i nowych możliwości. Jesteś zależny od warstwy łącza danych, która dostarcza Ci informacje o połączeniach między światami, a także korzystasz z warstwy transportowej, która synchronizuje przepływ danych w twoich mapach.';
 				break;
 			case 'Warstwa transportowa':
-				desc = 'Twoja mocna strona to zapewnianie płynnej komunikacji i zarządzanie zasobami.';
+				desc =
+					'Jesteś jak rzeka, która płynie przez życie, niosąc ze sobą wszystko, co jest ważne. Twoja praca jest jak rytm, który synchronizuje wszystko, co istnieje. Jesteś pośrednikiem między warstwą sieci a warstwą sesji, która korzysta z twojego rytmu, aby zapraszać gości do własnego domu.';
 				break;
 			case 'Warstwa sesji':
-				desc = 'Masz talent do nawiązywania i utrzymywania relacji, jesteś świetnym mediatorem.';
+				desc =
+					'Jesteś jak gospodarz, który zaprasza gości do swojego domu. Bez Ciebie nie byłoby spotkań, rozmów i wymiany myśli. Jesteś zależny od warstwy transportowej, która dostarcza Ci rytm, który synchronizuje spotkania, a także korzystasz z warstwy prezentacji, która maluje obrazy z kolorów i światła, aby uczynić spotkania bardziej atrakcyjnymi.';
 				break;
 			case 'Warstwa prezentacji':
-				desc = 'Jesteś kreatywną osobą z talentem do prezentowania informacji w zrozumiały sposób.';
+				desc =
+					'Jesteś jak artysta, który maluje obrazy z kolorów i światła. Twoja praca jest jak magia, która przekształca rzeczywistość w coś pięknego. Jesteś pośrednikiem między warstwą sesji a warstwą aplikacji, która korzysta z moich obrazów, aby nadać życiu głębię i znaczenie.';
 				break;
 			case 'Warstwa aplikacji':
 				desc =
-					'Masz zdolność do tworzenia praktycznych rozwiązań i jesteś zorientowany/a na użytkownika.';
+					'Jesteś jak poeta, który pisze wiersze o życiu i śmierci. Bez Ciebie nie byłoby sensu, który daje życiu jego głębię i znaczenie. Jesteś zależny od warstwy prezentacji, która dostarcza Ci obrazy, które inspirują moje wiersze, a także korzystasz ze wszystkich niższych warstw, które dostarczają mi informacje i możliwości, aby tworzyć coś nowego i pięknego.';
 				break;
 		}
 	}
@@ -225,7 +231,18 @@
 	{#if result}
 		<section class="p-8 mb-12 rounded-xl bg-zinc-200">
 			<h2 class="mb-8 text-2xl">Najbardziej pasuje do Ciebie... {result}!</h2>
-			<p class="">{desc}</p>
+			<p>{desc}</p>
+			<div class="pt-6 text-center">
+				<a href="https://github.com/zespere" target="_blank" class="text-blue-500 hover:underline"
+					>GitHub</a
+				>
+				|
+				<a
+					href="https://x.com/wojciech_jestem"
+					target="_blank"
+					class="text-blue-500 hover:underline">Twitter</a
+				>
+			</div>
 		</section>
 	{/if}
 {:else}
