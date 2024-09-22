@@ -2,6 +2,8 @@
 
 Take your ISO/OSI personality test for free!
 
+[Visit the website](https://isoperson.netlify.app)
+
 ## Building
 
 To create a production version of your app:
