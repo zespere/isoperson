@@ -189,7 +189,7 @@
 				break;
 			case 'Warstwa aplikacji':
 				desc =
-					'Jesteś jak poeta, który pisze wiersze o życiu i śmierci. Bez Ciebie nie byłoby sensu, który daje życiu jego głębię i znaczenie. Jesteś zależny od warstwy prezentacji, która dostarcza Ci obrazy, które inspirują moje wiersze, a także korzystasz ze wszystkich niższych warstw, które dostarczają mi informacje i możliwości, aby tworzyć coś nowego i pięknego.';
+					'Jesteś jak poeta, który pisze wiersze o życiu i śmierci. Bez Ciebie nie byłoby sensu, który daje życiu jego głębię i znaczenie. Jesteś zależny od warstwy prezentacji, która dostarcza Ci obrazy, które inspirują twoje wiersze, a także korzystasz ze wszystkich niższych warstw, które dostarczają Ci informacje i możliwości, aby tworzyć coś nowego i pięknego.';
 				break;
 		}
 	}
