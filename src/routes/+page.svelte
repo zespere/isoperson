@@ -238,9 +238,9 @@
 				>
 				|
 				<a
-					href="https://x.com/wojciech_jestem"
+					href="https://bsky.app/profile/wwoz.bsky.social"
 					target="_blank"
-					class="text-blue-500 hover:underline">Twitter</a
+					class="text-blue-500 hover:underline">BlueSky</a
 				>
 			</div>
 		</section>
