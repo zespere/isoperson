@@ -238,7 +238,7 @@
 				>
 				|
 				<a
-					href="https://bsky.app/profile/wwoz.bsky.social"
+					href="https://bsky.app/profile/wniak.com"
 					target="_blank"
 					class="text-blue-500 hover:underline">BlueSky</a
 				>
